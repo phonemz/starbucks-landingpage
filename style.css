@@ -38,12 +38,8 @@ body{
     
 }
 
-.menu li{
-    transition: transform 500ms;
-}
-
-.menu li:hover{
-    transform: scale(1.1);
+.menu li a:hover, .location a:hover, .login a:hover, .signup a:hover{
+    color: #ee090c;
 }
 
 .account{
@@ -98,6 +94,10 @@ body{
     padding: 5px 20px;
 }
 
+.text-body a:hover{
+    color: #ee090c;
+}
+
 .ads-1{
     display: flex;
     justify-content: space-between;
@@ -144,10 +144,6 @@ body{
     padding-left: 20px;
 }
 
-.burger-menu{
-    display: none;
-}
-
 .burger-menu div{
     height: 2px;
     width: 30px;
@@ -162,6 +158,88 @@ body{
 .burger-menu{
     margin-right: 40px;
     display: none;
+}
+
+.mobile{
+    display: none;
+}
+
+@media (max-width:600px){
+    .menu , .account{
+        display: none;
+    }
+
+    .burger-menu{
+        display: block;
+        cursor: pointer;
+    }
+
+    .mobile{
+        display: block;
+        position: absolute;
+        top: 100px;
+        right: 0;
+        height: 90vh;
+        width: 40%;
+        background: #fefefe;
+        transform: translateX(100%);
+        transition: all ease 400ms;
+    }
+    .mobile-menu{
+        padding-left: 20px;
+    }
+
+    .mobile-menu li a{
+        text-decoration: none;
+        color: #222;
+        font-weight: 600;
+        font-size: 1.2rem;
+    }
+
+    .mobile-menu li a:hover, .location a:hover, .login a:hover, .signup a:hover{
+        color: #ee090c;
+    }
+
+    .mobile-menu li{
+        list-style: none;
+    }
+
+    .mobile div{
+        padding: 0 0 20px 20px;
+    }
+
+    .ads-1 .image img{
+        width: 100vw;
+    }
+    .ads-1{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .final-4-grid{
+        flex-direction: column;
+    }
+
+    .grid-1 img, .grid-2 img{
+        width: 100vw;
+    }
+
+    
+}
+
+.move{
+    transform: translateX(0%);
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
 }
 
 
